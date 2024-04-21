@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #c7cafe;
+}
+
+.box{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    border-radius: 20px;
+    background: #2a34b5;
+    padding: 30px 50px;
+    box-shadow:inset 8px 8px 10px rgba(8, 1, 49, 0.3),
+    3px 3px 5px rgb(181, 187, 216),
+    4px 4px 8px rgba(5, 8, 96, 0.6);
+}
+
+h2{
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+#inputbox{
+    width: 100%;
+    box-sizing: content-box;
+    min-height: 5vh;
+    background: whitesmoke;
+    position: relative;
+    border-radius: 40px;
+    color: black;
+    font-size: 1em;
+}
+
+.box li{
+    position: relative;
+    display: flex;
+    width: calc(100% - 40px);
+    align-items: center;
+    background: #c7cafe;
+    margin: 15px 0px;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 40px;
+    color: rgb(3, 0, 0);
+    box-sizing: inset 8px 8px 10px rgba(2, 7, 20, 0.982),
+    inset 4px 4px 8px rgb(16, 2, 60),
+   inset -7px -7px 9px rgba(15, 11, 31, 0.6) ;
+}
+
+.box li i{
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    background:rgba(254, 4, 4, 0.996);
+    border-radius: 40px;
+    box-shadow:inset 5px 5px 7px rgba(132, 10, 1, 0.982),
+    inset 2px 2px 5px rgb(79, 2, 2),
+   inset -3px -3px 5px rgba(131, 13, 13, 0.6) ;
+}
+
+.box li i::before{
+content: '';
+right: 5px;
+top: 13px;
+position: absolute;
+width: 20px;
+height: 4px;
+background: #fff;
+transform: rotate(45deg);
+}
+
+.box li i::after{
+    content: '';
+    right: 5px;
+    top: 13px;
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    transform: rotate(-45deg);
+}
+
+.box li::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background:#102aee ;
+    border-radius: 50%;
+    box-shadow:inset 5px 5px 7px rgba(24, 13, 77, 0.982),
+    inset 2px 2px 5px rgb(13, 6, 130),
+   inset -3px -3px 5px rgba(34, 39, 135, 0.6) ;
+}
+
+.box li.done{
+    background: rgba(10, 169, 4, 0.996);
+    box-shadow:inset 5px 5px 7px rgba(1, 63, 9, 0.982),
+    inset 2px 2px 5px rgb(4, 114, 2),
+   inset -3px -3px 5px rgba(7, 239, 72, 0.6) ;
+}
+
+.box li::after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(315deg);
+}
+
+#list{
+    position: relative;
+    margin-top: 20px;
+    height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: #fff;
+}
